@@ -1,4 +1,3 @@
-function someFunction () {
     let someText = require("readline-sync")
 
     console.log("choose 1 for addition.")
@@ -7,8 +6,9 @@ function someFunction () {
     console.log("choose 4 for division.")
 
     let userSelect = someText.question("Enter your choice: ")
+    let  input = parseInt(userSelect)
 
-    switch(userSelect) {
+    switch(input) {
     case 1:
         addition()
         break
@@ -26,11 +26,30 @@ function someFunction () {
         break
     }
 
-}
-
 function addition () {
     let num1 = someText.question("Enter number 1: ")
     let num2 = someText.question("Enter number 2: ")
-    let sum = num1 + num2
-    console.log ("The sum of " + num1 + )
+    let result = parseInt(num1) + parseInt(num2)
+    console.log (num1 + " + " + num2 + " = " + result)
+}
+
+function subtraction () {
+    let num1 = someText.question("Enter number 1: ")
+    let num2 = someText.question("Enter number 2: ")
+    let result = parseInt(num1) - parseInt(num2)
+    console.log (num1 + " - " + num2 + " = " + result)
+}
+
+function multiplication () {
+    let num1 = someText.question("Enter number 1: ")
+    let num2 = someText.question("Enter number 2: ")
+    let result = parseInt(num1) * parseInt(num2)
+    console.log (num1 + " * " + num2 + " = " + result)
+}
+
+function division () {
+    let num1 = someText.question("Enter number 1: ")
+    let num2 = someText.question("Enter number 2: ")
+    let result = parseInt(num1) / parseInt(num2)
+    console.log (num1 + " / " + num2 + " = " + result)
 }
