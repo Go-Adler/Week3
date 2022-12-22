@@ -87,7 +87,7 @@ class MyClass extends Area {
 let someText = require("readline-sync")
 console.log("Enter 1 for Circle")
 console.log("Enter 2 for square")
-console.log("Enter 3 for rectangele")
+console.log("Enter 3 for rectangle")
 console.log("Enter 4 for triangle")
 let userIn = someText.question("Enter your choice: ")
 let choice = parseInt(userIn)
