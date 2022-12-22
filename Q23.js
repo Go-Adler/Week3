@@ -1,17 +1,34 @@
-class Car {
-	constructor(name) {
-		this.name = name;
-	}
-	introduce() {
-		console.log('This is ' + this.name + ' !');
-	}
-	static run() {
-		console.log('Car is running...!');
-	}
+class getClass {
+
+    getArray(limit) {
+        let someText = require("readline-sync")
+        let array = []
+        for (let i = 0; i < limit; i++) {
+            array[i] = []
+        }
+
+        for (let i = 0; i < limit; i++) {
+            for (let j = 0; j < limit; j++) {
+                array[i][j] = someText.question("Enter element (" + i + ", " + j + "): ")
+            }
+        }
+        return array
+    }
+
+    displayArray(limit, arrayStore) {
+        for (let i = 0; i < limit; i++) {
+            for(let j = 0; j < limit; j++) {
+                process.stdout.write(arrayStore[i][j] + "    ")
+            }
+           console.log()
+        }
+    }
 }
 
-const myCar = new Car('My Car');
-myCar.introduce();
+let someText = require("readline-sync")
+let userIn = someText.question("Enter the size of array: ")
+let limit = parseInt(userIn)
 
-// Calling the static method using class name
-Car.run();
+const o1 = new getClass()
+let arrayStore = o1.getArray(limit)
+o1.displayArray(limit, arrayStore)
