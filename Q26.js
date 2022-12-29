@@ -1,8 +1,0 @@
-let someText = require("readline-sync")
-let my_string = someText.question("Enter a string: ")
-let my_stringArray = my_string.split()
-    // my_stringArray = my_stringArray.reverse()
-    console.log(my_stringArray)
-let newArray = my_stringArray.reverse()
-console.log(newArray)
-console.log(newArray.join(""))
